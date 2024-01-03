@@ -1,0 +1,11 @@
+.card_img{
+    width: 200px!important;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+.search_form{
+    border-radius:  5px 0px 0px 5px!important;
+}
+.search_form2{
+    border-radius:  0px 5px 5px 0px!important;
+}
