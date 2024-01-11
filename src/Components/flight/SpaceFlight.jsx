@@ -33,7 +33,7 @@ const SpaceFlight = () => {
       return item.mission_name.toLowerCase().includes(search.toLowerCase());
     });
 
-    if (status === "") {
+    if (status === " ") {
       setFilterSuccess(filteredSearch);
     } else {
       const updatedList = filteredSearch.filter(
@@ -42,8 +42,6 @@ const SpaceFlight = () => {
       setFilterSuccess(updatedList);
     }
   }, [status, data, search]);
-
-  
 
   return (
     <>
@@ -113,6 +111,7 @@ const SpaceFlight = () => {
           {/* <FlightCard search={search} status={status} data={filteredLaunches}/> */}
         </Container>
       </section>
+
       <section className="mt-5 px-1">
         <Container>
           <Row>
@@ -122,11 +121,13 @@ const SpaceFlight = () => {
                   <Col lg={4} md={6} className="mb-3" key={index}>
                     <div className="border rounded-1 ">
                       <div>
-                        <img
-                          src={curElem?.links?.mission_patch_small || ""}
-                          alt=""
-                          className="img-fluid card_img my-4"
-                        />
+                        <div className="d-flex justify-content-center">
+                          <img
+                            src={curElem?.links?.mission_patch_small || ""}
+                            alt=""
+                            className="img-fluid card_img my-4"
+                          />
+                        </div>
                         <p className="text-center mb-0  text-secondary">
                           Launch date:{" "}
                           {formatDate(curElem?.launch_date_local) || ""}
