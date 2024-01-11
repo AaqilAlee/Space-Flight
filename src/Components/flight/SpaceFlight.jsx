@@ -99,9 +99,10 @@ const SpaceFlight = () => {
                         className="rounded-1"
                       >
                         <option>Select status</option>
-                        <option value="1">week</option>
-                        <option value="2">days</option>
-                        <option value="3">month</option>
+                        <option value="1">Last Days</option>
+                        <option value="2">Last Week</option>
+                        <option value="3">Last Month</option>
+                        <option value="3">Last Year</option>
                       </Form.Select>
                     </Col>
                   </Row>
